@@ -26,12 +26,12 @@ class ListBudget {
            `;
 
     li.querySelector("button.btn-delete").addEventListener("click", (event) => {
-      const index = event.target.parentNode.parentNode.parentNode.dataset.key;
+      const index = event.target.closest("li").dataset.key;
       this.remove(index);
     });
 
     li.querySelector("button.btn-edit").addEventListener("click", (event) => {
-      const index = event.target.parentNode.parentNode.parentNode.dataset.key;
+      const index = event.target.closest("li").dataset.key;
       this.edit(index);
     });
 
